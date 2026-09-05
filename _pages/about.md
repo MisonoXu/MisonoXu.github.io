@@ -2,7 +2,7 @@
 layout: about
 title: Home
 permalink: "/"
-nav: true
+nav: false
 nav_order: 1
 subtitle: 助理教授 · 湖南大学人工智能与机器人学院<br>Assistant Professor, School of Artificial Intelligence
   and Robotics, Hunan University
