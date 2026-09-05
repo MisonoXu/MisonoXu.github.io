@@ -1,108 +1,45 @@
 name: Deploy site
-
 on:
   push:
-    branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!docs/CONTRIBUTING.md"
-      - "!docs/CUSTOMIZE.md"
-      - "!docs/FAQ.md"
-      - "!docs/INSTALL.md"
-      - "!README.md"
+    branches: [main, master]
   pull_request:
-    branches:
-      - master
-      - main
-    paths:
-      - "assets/**"
-      - "**.bib"
-      - "**.html"
-      - "**.js"
-      - "**.liquid"
-      - "**/*.md"
-      - "**.yml"
-      - "Gemfile"
-      - "Gemfile.lock"
-      - "!.github/workflows/axe.yml"
-      - "!.github/workflows/broken-links.yml"
-      - "!.github/workflows/deploy-docker-tag.yml"
-      - "!.github/workflows/deploy-image.yml"
-      - "!.github/workflows/docker-slim.yml"
-      - "!.github/workflows/lighthouse-badger.yml"
-      - "!.github/workflows/prettier.yml"
-      - "!lighthouse_results/**"
-      - "!docs/CONTRIBUTING.md"
-      - "!docs/CUSTOMIZE.md"
-      - "!docs/FAQ.md"
-      - "!docs/INSTALL.md"
-      - "!README.md"
+    branches: [main, master]
   workflow_dispatch:
-
 permissions:
   contents: write
-
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   deploy:
-    # available images: https://github.com/actions/runner-images#available-images
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout 🛎️
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: Setup Ruby 💎
+      - name: Setup Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version: "3.3.5"
+          ruby-version: '3.3.5'
           bundler-cache: true
-      - name: Setup Python 🐍
-        uses: actions/setup-python@v5
-        with:
-          python-version: "3.13"
-          cache: "pip" # caching pip dependencies
-      - name: Setup Node 🧰
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
-      - name: Install JS deps 📦
-        run: npm ci
-      - name: Update _config.yml ⚙️
-        uses: fjogeleit/yaml-update-action@main
-        with:
-          commitChange: false
-          valueFile: "_config.yml"
-          propertyPath: "giscus.repo"
-          value: ${{ github.repository }}
-      - name: Install and Build 🔧
+          node-version: '20'
+      - name: Build website
+        env:
+          JEKYLL_ENV: production
+          SITE_OWNER: ${{ github.repository_owner }}
+          SITE_REPOSITORY: ${{ github.event.repository.name }}
         run: |
-          sudo apt-get update && sudo apt-get install -y imagemagick
-          pip3 install --upgrade nbconvert
-          export JEKYLL_ENV=production
-          bundle exec jekyll build
-      - name: Purge unused CSS 🧹
-        run: |
-          npm install -g purgecss
-          purgecss -c purgecss.config.js
-      - name: Deploy 🚀
+          ruby -ryaml -e 'name = ENV.fetch("SITE_REPOSITORY"); owner = ENV.fetch("SITE_OWNER").downcase; abort "Use the username.github.io repository" unless name.downcase == "#{owner}.github.io"; File.write("/tmp/pages-url.yml", {"url" => "https://#{owner}.github.io", "baseurl" => ""}.to_yaml)'
+          bundle exec al-folio upgrade audit --no-fail
+          bundle exec jekyll build --config _config.yml,/tmp/pages-url.yml
+          test -f _site/index.html
+          test -f _site/assets/pdf/Jing-Zhe_Xu_CV.pdf
+          touch _site/.nojekyll
+      - name: Deploy to gh-pages
         if: github.event_name != 'pull_request'
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: _site
+          branch: gh-pages

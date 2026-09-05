@@ -1,65 +1,47 @@
 ---
 layout: page
-title: projects
-permalink: /projects/
-description: A growing collection of your cool projects.
+title: Projects
+permalink: "/projects/"
 nav: true
-nav_order: 3
-display_categories: [work, fun]
-horizontal: false
+nav_order: 4
+description: 科研项目、专利、荣誉与学术服务
 ---
 
-<!-- pages/projects.md -->
-<div class="projects">
-{% if site.enable_project_categories and page.display_categories %}
-  <!-- Display categorized projects -->
-  {% for category in page.display_categories %}
-  <a id="{{ category }}" href=".#{{ category }}">
-    <h2 class="category">{{ category }}</h2>
-  </a>
-  {% assign categorized_projects = site.projects | where: "category", category %}
-  {% assign sorted_projects = categorized_projects | sort: "importance" %}
-  <!-- Generate cards for each project -->
-  {% if page.horizontal %}
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-  {% endfor %}
+<link rel="stylesheet" href="{{ "/assets/css/profile.css" | relative_url }}">
 
-{% else %}
+## Research Projects
 
-<!-- Display projects without categories -->
+### 强对抗场景下混合网络化系统的优化与博弈控制
 
-{% assign sorted_projects = site.projects | sort: "importance" %}
+**国家自然科学基金青年学生基础研究项目（博士研究生）**  
+2025.01—2026.12 · **主持**
 
-  <!-- Generate cards for each project -->
+### 开放不确定环境下集群智能系统安全协同控制研究
 
-{% if page.horizontal %}
+**国家自然科学基金面上项目**  
+2024.01—2027.12 · **参与**
 
-  <div class="container">
-    <div class="row row-cols-1 row-cols-md-2">
-    {% for project in sorted_projects %}
-      {% include projects_horizontal.liquid %}
-    {% endfor %}
-    </div>
-  </div>
-  {% else %}
-  <div class="row row-cols-1 row-cols-md-3">
-    {% for project in sorted_projects %}
-      {% include projects.liquid %}
-    {% endfor %}
-  </div>
-  {% endif %}
-{% endif %}
-</div>
+## Patents
+
+1. 徐景喆等，一种复杂遥操作技术的神经自适应固定时间控制方法，中国发明专利，CN111427264B，已授权。
+2. 徐景喆等，冷却液自动补充及维持特定浓度装置，中国发明专利，CN107562080A，实质审查。
+3. 董玖旺、黄凯伦、梁昌铎、葛明峰、苏鹏、徐景喆等，多智能体系统有限时间多目标协同追踪方法和存储介质，中国发明专利，CN113400299A，实质审查。
+4. 苏鹏、黄凯伦、梁昌铎、葛明峰、董玖旺、徐景喆等，网络化机器人协同控制方法、装置、设备及存储介质，中国发明专利，CN113359439A，实质审查。
+5. 段修栋、李昌平、周益、帅宇航、黄云浩、徐景喆等，一种基于带锯床的定长自动送料装置，中国发明专利，CN108213579A，实质审查。
+6. 丁腾飞、李波、周天福、李敏杰、赵敬川、徐景喆等，一种用于储存钢材的密集型智能立体仓储系统，中国发明专利，CN106809587A，实质审查。
+
+## Honors and Academic Presentations
+
+- 2025年，第二十一届网络科学与工程论坛优秀学生报告
+- 2025年，博士研究生国家奖学金
+- 2024年，博士研究生国家奖学金
+- 2021年，硕士研究生国家奖学金
+
+## Academic Service
+
+受邀担任以下期刊审稿人：
+
+- Automatica
+- IEEE Transactions on Vehicular Technology
+- IEEE/ASME Transactions on Mechatronics
+- IEEE Transactions on Industrial Informatics

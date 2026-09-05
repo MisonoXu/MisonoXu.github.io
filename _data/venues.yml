@@ -1,9 +1,26 @@
-"AJP":
-  url: https://aapt.scitation.org/journal/ajp
-  color: "#00369f"
-
-"PhysRev":
-  url: https://journals.aps.org/
-
-"Vision":
-  color: "#009f36"
+Automatica:
+  color: "#465d80"
+IEEE TCNS:
+  color: "#465d80"
+ISA Transactions:
+  color: "#465d80"
+IEEE TSMC:
+  color: "#465d80"
+IET CTA:
+  color: "#465d80"
+IEEE TIE:
+  color: "#465d80"
+IEEE TII:
+  color: "#465d80"
+IEEE TVT:
+  color: "#465d80"
+IEEE/CAA JAS:
+  color: "#465d80"
+IEEE TAC:
+  color: "#465d80"
+IEEE TASE:
+  color: "#465d80"
+IJRNC:
+  color: "#465d80"
+IEEE/ASME TMech:
+  color: "#465d80"
