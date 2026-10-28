@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",function(){function t(){e.setAttribute("href",n+window.location.hash)}const e=document.querySelector(".xu-language-switch");if(!e)return;const n=e.getAttribute("href");t(),window.addEventListener("hashchange",t)});
