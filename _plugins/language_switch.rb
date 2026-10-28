@@ -11,6 +11,8 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   # Remove it so its layered !important rule cannot force open our mobile menu.
   navbar = container.parent
   navbar["class"] = navbar["class"].split.reject { |name| name == "navbar-expand-sm" }.join(" ")
+  panel = container.at_css(".navbar-collapse-main")
+  panel["class"] = panel["class"].split.reject { |name| name == "collapse" }.join(" ") if panel
 
   english = page.site.config["lang"] == "en"
   route = page.url.sub(/index\.html$/, "")
