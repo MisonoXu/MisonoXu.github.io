@@ -7,6 +7,11 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   container = html.at_css("#navbar > .container")
   next unless container
 
+  # The theme's 576px expansion is too narrow for the language button.
+  # Remove it so its layered !important rule cannot force open our mobile menu.
+  navbar = container.parent
+  navbar["class"] = navbar["class"].split.reject { |name| name == "navbar-expand-sm" }.join(" ")
+
   english = page.site.config["lang"] == "en"
   route = page.url.sub(/index\.html$/, "")
   alternate = english ? route : "/en#{route}"
