@@ -33,7 +33,7 @@ jobs:
         run: |
           ruby -ryaml -e 'name = ENV.fetch("SITE_REPOSITORY"); owner = ENV.fetch("SITE_OWNER").downcase; abort "Use the username.github.io repository" unless name.downcase == "#{owner}.github.io"; File.write("/tmp/pages-url.yml", {"url" => "https://#{owner}.github.io", "baseurl" => ""}.to_yaml)'
           bundle exec al-folio upgrade audit --no-fail
-          bundle exec jekyll build --config _config.yml,/tmp/pages-url.yml
+          bash scripts/build_bilingual.sh
           test -f _site/index.html
           test -f _site/assets/pdf/Jing-Zhe_Xu_CV.pdf
           touch _site/.nojekyll

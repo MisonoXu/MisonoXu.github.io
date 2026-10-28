@@ -1,0 +1,168 @@
+---
+cv:
+  name: Jing-Zhe Xu
+  label: Assistant Professor, Hunan University
+  email: jzxu@hnu.edu.cn
+  location: Changsha, China
+  summary: Department of Control Science and Engineering, School of Artificial Intelligence
+    and Robotics, Hunan University. Core member of the National Engineering Research
+    Center for Robot Visual Perception and Control Technology.
+  sections:
+    Experience:
+    - company: School of Artificial Intelligence and Robotics, Hunan University
+      position: Assistant Professor
+      start_date: 2026
+      end_date: present
+    Education:
+    - institution: Huazhong University of Science and Technology
+      area: Control Science and Engineering
+      studyType: Ph.D.
+      start_date: 2022-09
+      end_date: 2026-06
+      highlights:
+      - 'Supervisors: D.-X. He and Z.-W. Liu; co-supervisor: M. Chi.'
+    - institution: China University of Geosciences (Wuhan)
+      area: Mechanical Engineering
+      studyType: Master's degree
+      start_date: 2019-09
+      end_date: 2022-06
+      highlights:
+      - 'Supervisor: M.-F. Ge.'
+    - institution: China University of Geosciences (Wuhan)
+      area: Mechanical Design, Manufacturing and Automation
+      studyType: Bachelor's degree
+      start_date: 2015-09
+      end_date: 2019-06
+    Interests:
+    - name: Delay-tolerant distributed optimization
+      keywords: Delay-Tolerant Distributed Optimization
+    - name: Dynamic games and resilient reconfiguration
+      keywords: Dynamic Games & Resilient Reconfiguration
+    - name: Human and AI in the loop for multi-robot systems
+      keywords: Human/AI-in-the-Loop Multi-Robot Execution
+    Projects:
+    - name: Optimization and game-theoretic control of hybrid networked systems in
+        highly adversarial scenarios
+      summary: Principal Investigator, National Natural Science Foundation of China,
+        Basic Research Program for Young Students (Doctoral Students)
+      start_date: 2025-01
+      end_date: 2026-12
+    - name: Secure cooperative control of swarm intelligence systems in open and uncertain
+        environments
+      summary: Project Participant, National Natural Science Foundation of China,
+        General Program
+      start_date: 2024-01
+      end_date: 2027-12
+    Publications:
+    - title: Semiglobal input-delay tolerance algorithm for distributed nonconvex
+        optimization of networked nonlinear system
+      authors:
+      - Xu, J.-Z.
+      - Liu, Z.-W.
+      - Ge, M.-F.
+      - Wang, Y.-W.
+      - He, D.
+      publisher: IEEE Transactions on Automatic Control
+      releaseDate: '2026'
+    - title: Distributed predefined-time algorithms for optimal solution seeking in
+        multi-agent systems subject to input disturbances
+      authors:
+      - Xu, J.-Z.
+      - Liu, Z.-W.
+      - Ge, M.-F.
+      - Yang, T.
+      - Chi, M.
+      - He, D.
+      publisher: Automatica
+      releaseDate: '2025'
+    - title: Force-reflecting hierarchical approach for human-aided teleoperation
+        of NRS with event-triggered local communication
+      authors:
+      - Xu, J.-Z.
+      - Ge, M.-F.
+      - Liu, Z.-W.
+      - Zhang, W.-Y.
+      - Wei, W.
+      publisher: IEEE Transactions on Industrial Electronics
+      releaseDate: '2022'
+    - title: Hierarchical cloud-supported control framework for space teleoperation
+        with networked-follower robots
+      authors:
+      - Xu, J.-Z.
+      - Ge, M.-F.
+      - Liu, Z.-W.
+      - Yan, H.
+      - Liang, C.-D.
+      - Wu, Y.-D.
+      publisher: IEEE/ASME Transactions on Mechatronics
+      releaseDate: '2024'
+    - title: Self-triggered MPC for teleoperation of networked mobile robotic system
+        via high-order estimation
+      authors:
+      - Xu, J.-Z.
+      - Liu, Z.-W.
+      - Ge, M.-F.
+      - Wang, Y.-W.
+      - He, D.-X.
+      publisher: IEEE Transactions on Automation Science and Engineering
+      releaseDate: '2025'
+    - title: Distributed Time-Varying Optimization for Predefined-Time Affine Formation
+        in MASs
+      authors:
+      - Xu, J.-Z.
+      - Liu, Z.-W.
+      - Sun, X.
+      - He, D.
+      - Ge, M.-F.
+      publisher: IEEE Transactions on Automation Science and Engineering
+      releaseDate: '2026'
+    - title: Dynamic Nash equilibrium seeking for constrained non-cooperative optimization
+        of open multi-agent systems
+      authors:
+      - Xu, J.-Z.
+      - Liu, Z.-W.
+      - He, D.-X.
+      - Jia, Z.
+      - Ge, M.-F.
+      publisher: 'IEEE Transactions on Systems, Man, and Cybernetics: Systems'
+      releaseDate: '2025'
+    - title: Hierarchical prescribed-performance nonlinear control for teleoperation
+        of networked secondary robots with coupling constraints
+      authors:
+      - Xu, J.-Z.
+      - Peng, H.-L.
+      - Ge, M.-F.
+      - Liu, Z.-W.
+      - Yan, H.
+      - Liu, J.
+      publisher: IEEE Transactions on Control of Network Systems
+      releaseDate: '2025'
+    - title: Distributed robust predefined-time algorithm for seeking Nash equilibrium
+        in MASs
+      authors:
+      - Xu, J.-Z.
+      - Liu, Z.-W.
+      - Ge, M.-F.
+      - Wang, Y.-W.
+      - He, D.
+      publisher: IEEE/CAA Journal of Automatica Sinica
+      releaseDate: '2025'
+    - title: Robust predefined-time control for optimal formation of networked mobile
+        vehicle systems
+      authors:
+      - Xu, J.-Z.
+      - Liu, Z.-W.
+      - He, D.-X.
+      - Ge, M.-F.
+      - Chi, M.
+      publisher: IEEE/CAA Journal of Automatica Sinica
+      releaseDate: '2025'
+    Awards:
+    - title: Outstanding Student Presentation, 21st Forum on Network Science and Engineering
+      date: '2025'
+    - title: National Scholarship for Doctoral Students
+      date: '2025'
+    - title: National Scholarship for Doctoral Students
+      date: '2024'
+    - title: National Scholarship for Master's Students
+      date: '2021'

@@ -1,3 +1,4 @@
+---
 cv:
   name: 徐景喆 | Jing-Zhe Xu
   label: 助理教授 · 湖南大学
@@ -99,6 +100,16 @@ cv:
       - He, D.-X.
       publisher: IEEE Transactions on Automation Science and Engineering
       releaseDate: '2025'
+    - title: Distributed Time-Varying Optimization for Predefined-Time Affine Formation
+        in MASs
+      authors:
+      - Xu, J.-Z.
+      - Liu, Z.-W.
+      - Sun, X.
+      - He, D.
+      - Ge, M.-F.
+      publisher: IEEE Transactions on Automation Science and Engineering
+      releaseDate: '2026'
     - title: Dynamic Nash equilibrium seeking for constrained non-cooperative optimization
         of open multi-agent systems
       authors:
@@ -140,73 +151,6 @@ cv:
       - Chi, M.
       publisher: IEEE/CAA Journal of Automatica Sinica
       releaseDate: '2025'
-    - title: A mode-switched control architecture for human-in-the-loop teleoperation
-        of multislave robots via data-training-based observer
-      authors:
-      - Ge, M.-F.
-      - Xu, J.-Z.
-      - Liu, Z.-W.
-      - Huang, J.
-      publisher: 'IEEE Transactions on Systems, Man, and Cybernetics: Systems'
-      releaseDate: '2024'
-    - title: Hierarchical predefined-time control of teleoperation systems with state
-        and communication constraints
-      authors:
-      - Xu, J.-Z.
-      - Ge, M.-F.
-      - Ling, G.
-      - Liu, F.
-      - Park, J. H.
-      publisher: International Journal of Robust and Nonlinear Control
-      releaseDate: '2021'
-    - title: Neuro-adaptive fixed-time trajectory tracking control for human-in-the-loop
-        teleoperation with mixed communication delays
-      authors:
-      - Xu, J.-Z.
-      - Ge, M.-F.
-      - Ding, T.-F.
-      - Liang, C.-D.
-      - Liu, Z.-W.
-      publisher: IET Control Theory & Applications
-      releaseDate: '2021'
-    - title: Hierarchical regulation strategy for smoothing tie-line power fluctuations
-        in grid-connected microgrids with battery storage aggregators
-      authors:
-      - Wen, G.
-      - Xu, J.-Z.
-      - Liu, Z.-W.
-      publisher: IEEE Transactions on Industrial Informatics
-      releaseDate: '2024'
-    - title: Secure and privacy-preserving formation control for networked marine
-        surface vehicles with sampled-data interactions
-      authors:
-      - Liang, C.-D.
-      - Ge, M.-F.
-      - Xu, J.-Z.
-      - others
-      publisher: IEEE Transactions on Vehicular Technology
-      releaseDate: '2022'
-    - title: Hierarchical optimization for task-space bipartite coordination of multiple
-        uncertain Lagrange plants
-      authors:
-      - Gu, Z.-W.
-      - Ge, M.-F.
-      - Liu, Z.-W.
-      - Yan, H.
-      - Liu, J.
-      - Xu, J.-Z.
-      publisher: Automatica
-      releaseDate: '2023'
-    - title: Hierarchical finite-time cooperative control for teleoperation of networked
-        disturbed mobile manipulators
-      authors:
-      - Fu, J.
-      - Xu, J.-Z.
-      - Ge, M.-F.
-      - Ding, T.-F.
-      - Park, J. H.
-      publisher: ISA Transactions
-      releaseDate: '2023'
     Awards:
     - title: 第二十一届网络科学与工程论坛优秀学生报告
       date: '2025'

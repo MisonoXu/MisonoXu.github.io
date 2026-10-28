@@ -114,6 +114,8 @@ kramdown:
 include:
 - _pages
 exclude:
+- _i18n/
+- scripts/
 - AGENTS.md
 - al-folio-upgrade-report.md
 - bin/
