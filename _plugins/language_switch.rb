@@ -18,6 +18,7 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   route = page.url.sub(/index\.html$/, "")
   alternate = english ? route : "/en#{route}"
   base = page.site.config["baseurl"].to_s
+  version = page.site.time.to_i
   head = html.at_css("head")
 
   link = Nokogiri::XML::Node.new("a", html)
@@ -38,10 +39,10 @@ Jekyll::Hooks.register :pages, :post_render do |page|
   end
   css = Nokogiri::XML::Node.new("link", html)
   css["rel"] = "stylesheet"
-  css["href"] = "#{base}/assets/css/language-switch.css"
+  css["href"] = "#{base}/assets/css/language-switch.css?v=#{version}"
   head.add_child(css)
   js = Nokogiri::XML::Node.new("script", html)
-  js["src"] = "#{base}/assets/js/language-switch.js"
+  js["src"] = "#{base}/assets/js/language-switch.js?v=#{version}"
   js["defer"] = "defer"
   head.add_child(js)
   page.output = html.to_html
