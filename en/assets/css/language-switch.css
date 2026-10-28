@@ -14,6 +14,12 @@
 }
 #navbar .xu-language-switch:hover { background: #7893b71a; }
 #navbar .xu-language-switch:focus-visible { outline: 2px solid #607ba3; outline-offset: 3px; }
+@media (min-width: 992px) {
+  #navbar .navbar-collapse-main { display: flex; flex-basis: auto; width: auto; }
+  #navbar .navbar-menu-list { flex-direction: row; }
+  #navbar .navbar-menu-list .nav-link { padding: .5rem; }
+  #navbar .navbar-toggler-main { display: none; }
+}
 @media (max-width: 991.98px) {
   #navbar > .container { display: flex; flex-wrap: wrap; }
   #navbar .navbar-brand { order: 0; font-size: 1rem; }
